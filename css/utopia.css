@@ -1,0 +1,123 @@
+/** =============================================
+     *            Fluid Typography Clamps
+     *        Viewport Range: 360px to 1150px
+     *============================================= **/
+
+/* @link https://utopia.fyi/type/calculator?c=360,16,1.2,1150,18,1.25,8,3,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  /* Step -3: 9.2593px → 9.216px */
+  --step--3: clamp(0.576rem, 0.5799rem + -0.0055vw, 0.5787rem);
+
+  /* Step -2: 11.1111px → 11.52px */
+  --step--2: clamp(0.6944rem, 0.6828rem + 0.0518vw, 0.72rem);
+
+  /* Step -1: 13.3333px → 14.4px */
+  --step--1: clamp(0.8333rem, 0.803rem + 0.135vw, 0.9rem);
+
+  /* Step 0: 16px → 18px */
+  --step-0: clamp(1rem, 0.943rem + 0.2532vw, 1.125rem);
+
+  /* Step 1: 19.2px → 22.5px */
+  --step-1: clamp(1.2rem, 1.106rem + 0.4177vw, 1.4063rem);
+
+  /* Step 2: 23.04px → 28.125px */
+  --step-2: clamp(1.44rem, 1.2952rem + 0.6437vw, 1.7578rem);
+
+  /* Step 3: 27.648px → 35.1563px */
+  --step-3: clamp(1.728rem, 1.5142rem + 0.9504vw, 2.1973rem);
+
+  /* Step 4: 33.1776px → 43.9453px */
+  --step-4: clamp(2.0736rem, 1.7669rem + 1.363vw, 2.7466rem);
+
+  /* Step 5: 39.8131px → 54.9316px */
+  --step-5: clamp(2.4883rem, 2.0577rem + 1.9137vw, 3.4332rem);
+
+  /* Step 6: 47.7757px → 68.6646px */
+  --step-6: clamp(2.986rem, 2.391rem + 2.6442vw, 4.2915rem);
+
+  /* Step 7: 57.3309px → 85.8307px */
+  --step-7: clamp(3.5832rem, 2.7715rem + 3.6076vw, 5.3644rem);
+
+  /* Step 8: 68.7971px → 107.2884px */
+  --step-8: clamp(4.2998rem, 3.2035rem + 4.8723vw, 6.7055rem);
+}
+
+/** ============================================
+ *                  Spaces
+ *============================================= **/
+
+/* @link https://utopia.fyi/space/calculator?c=360,16,1.2,1150,18,1.25,8,3,&s=0.75|0.5|0.2,1.5|2|2.5|3.5|4.5|5.5|7,s-l&g=s,l,xl,12 */
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+:root {
+  /* Space 3xs: 3px → 4px */
+  --space-3xs: clamp(0.1875rem, 0.159rem + 0.1266vw, 0.25rem);
+
+  /* Space 2xs: 8px → 9px */
+  --space-2xs: clamp(0.5rem, 0.4715rem + 0.1266vw, 0.5625rem);
+
+  /* Space xs: 12px → 14px */
+  --space-xs: clamp(0.75rem, 0.693rem + 0.2532vw, 0.875rem);
+
+  /* Space s: 16px → 18px */
+  --space-s: clamp(1rem, 0.943rem + 0.2532vw, 1.125rem);
+
+  /* Space m: 24px → 27px */
+  --space-m: clamp(1.5rem, 1.4146rem + 0.3797vw, 1.6875rem);
+
+  /* Space l: 32px → 36px */
+  --space-l: clamp(2rem, 1.8861rem + 0.5063vw, 2.25rem);
+
+  /* Space xl: 40px → 45px */
+  --space-xl: clamp(2.5rem, 2.3576rem + 0.6329vw, 2.8125rem);
+
+  /* Space 2xl: 56px → 63px */
+  --space-2xl: clamp(3.5rem, 3.3006rem + 0.8861vw, 3.9375rem);
+
+  /* Space 3xl: 72px → 81px */
+  --space-3xl: clamp(4.5rem, 4.2437rem + 1.1392vw, 5.0625rem);
+
+  /* Space 4xl: 88px → 99px */
+  --space-4xl: clamp(5.5rem, 5.1867rem + 1.3924vw, 6.1875rem);
+
+  /* Space 5xl: 112px → 126px */
+  --space-5xl: clamp(7rem, 6.6013rem + 1.7722vw, 7.875rem);
+
+  /* One-up pairs */
+
+  /* Space 3xs-2xs: 3px → 9px */
+  --space-3xs-2xs: clamp(0.1875rem, 0.0166rem + 0.7595vw, 0.5625rem);
+
+  /* Space 2xs-xs: 8px → 14px */
+  --space-2xs-xs: clamp(0.5rem, 0.3291rem + 0.7595vw, 0.875rem);
+
+  /* Space xs-s: 12px → 18px */
+  --space-xs-s: clamp(0.75rem, 0.5791rem + 0.7595vw, 1.125rem);
+
+  /* Space s-m: 16px → 27px */
+  --space-s-m: clamp(1rem, 0.6867rem + 1.3924vw, 1.6875rem);
+
+  /* Space m-l: 24px → 36px */
+  --space-m-l: clamp(1.5rem, 1.1582rem + 1.519vw, 2.25rem);
+
+  /* Space l-xl: 32px → 45px */
+  --space-l-xl: clamp(2rem, 1.6297rem + 1.6456vw, 2.8125rem);
+
+  /* Space xl-2xl: 40px → 63px */
+  --space-xl-2xl: clamp(2.5rem, 1.8449rem + 2.9114vw, 3.9375rem);
+
+  /* Space 2xl-3xl: 56px → 81px */
+  --space-2xl-3xl: clamp(3.5rem, 2.788rem + 3.1646vw, 5.0625rem);
+
+  /* Space 3xl-4xl: 72px → 99px */
+  --space-3xl-4xl: clamp(4.5rem, 3.731rem + 3.4177vw, 6.1875rem);
+
+  /* Space 4xl-5xl: 88px → 126px */
+  --space-4xl-5xl: clamp(5.5rem, 4.4177rem + 4.8101vw, 7.875rem);
+
+  /* Custom pairs */
+
+  /* Space s-l: 16px → 36px */
+  --space-s-l: clamp(1rem, 0.4304rem + 2.5316vw, 2.25rem);
+}
