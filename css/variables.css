@@ -33,6 +33,17 @@
   /* ---------- Typography: Font families ---------- */
   --ff-rubik: "Rubik", sans-serif;
 
+  /* ---------- Effects: Shadows (Sorted from smallest to largest) ---------- */
+  --shd-xs: 0 1px 2px hsl(0deg 0% 0% / 10%);
+  --shd-s: 0 1.2rem 3.2rem hsl(0deg 0% 0% / 3%);
+  --shd-m: 0 2.4rem 4.8rem hsl(0deg 0% 0% / 7.5%);
+  --shd-l: 0 2.4rem 4.8rem hsl(0deg 0% 0% / 15%);
+  --shd-xl: 0 3.2rem 6.4rem hsl(0deg 0% 0% / 6%);
+
+  /* ---------- Effects: Rings & Outlines (Using box-shadow under the hood) ---------- */
+  --ring-inset-white: inset 0 0 0 3px var(--clr-white);
+  --ring-focus-orange: 0 0 0 0.8rem hsl(from var(--clr-orange-100) h s l/ 50%);
+
   /* ===================================================
                      SEMANTIC TOKENS
      =================================================== */
@@ -78,4 +89,19 @@
   --color-surface-brand-base: var(--clr-orange-600);
   --color-surface-brand-low: var(--clr-orange-700);
   --color-surface-brand-lowest: var(--clr-orange-900);
+
+  /* ---------- Elevation (Shadows) ---------- */
+  --shadow-subtle: var(--shd-xs);
+  --shadow-low: var(--shd-s);
+  --shadow-base: var(--shd-m);
+  --shadow-high: var(--shd-xl);
+  --shadow-prominent: var(--shd-l);
+
+  /* ---------- Outlines & Focus Rings ---------- */
+  --outline-button-hover: var(--ring-inset-white);
+  --focus-ring-brand: var(--ring-focus-orange);
+
+  /* ---------- Shape: Border radius ---------- */
+  --border-radius-m: 9px;
+  --border-radius-l: 11px;
 }
