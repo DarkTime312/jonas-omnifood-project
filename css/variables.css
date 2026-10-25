@@ -60,6 +60,7 @@
   --font-size-4xl: var(--step-5);
   --font-size-5xl: var(--step-6);
   --font-size-6xl: var(--step-7);
+  --font-size-7xl: var(--step-8);
 
   /* ---------- Typography: Font families ---------- */
   --font-family-body: var(--ff-rubik);
