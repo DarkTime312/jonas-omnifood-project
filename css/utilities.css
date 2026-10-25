@@ -1,0 +1,63 @@
+/* =================================
+             Typography
+   ================================= */
+
+.u-text-2xs {
+  /* 9.2593px → 9.216px */
+  font-size: var(--font-size-2xs);
+}
+
+.u-text-xs {
+  /* 11.1111px → 11.52px */
+  font-size: var(--font-size-xs);
+}
+
+.u-text-s {
+  /* 13.3333px → 14.4px */
+  font-size: var(--font-size-s);
+}
+
+.u-text-m {
+  /* 16px → 18px */
+  font-size: var(--font-size-base);
+}
+
+.u-text-l {
+  /* 19.2px → 22.5px */
+  font-size: var(--font-size-l);
+}
+
+.u-text-xl {
+  /* 23.04px → 28.125px */
+  font-size: var(--font-size-xl);
+}
+
+.u-text-2xl {
+  /* 27.648px → 35.1563px */
+  font-size: var(--font-size-2xl);
+}
+
+.u-text-3xl {
+  /* 33.1776px → 43.9453px */
+  font-size: var(--font-size-3xl);
+}
+
+.u-text-4xl {
+  /* 39.8131px → 54.9316px */
+  font-size: var(--font-size-4xl);
+}
+
+.u-text-5xl {
+  /* 47.7757px → 68.6646px */
+  font-size: var(--font-size-5xl);
+}
+
+.u-text-6xl {
+  /* 57.3309px → 85.8307px */
+  font-size: var(--font-size-6xl);
+}
+
+.u-text-7xl {
+  /* 68.7971px → 107.2884px */
+  font-size: var(--font-size-7xl);
+}

@@ -1,0 +1,384 @@
+/* ============================================
+            THE WRAPPER & THE CENTER 
+   ============================================ */
+
+/* 
+Both layouts control horizontal constraints by restricting maximum width 
+and perfectly centering content within the available space. 
+
+WHY THEY ARE SEPARATED:
+- .l-wrapper is for MACRO layouts: It constrains entire page sections 
+  so the website doesn't stretch to infinity on large monitors. It uses 
+  built-in padding to prevent content from touching the viewport edges.
+- .l-center is for MICRO layouts (nested items): Used inside wrappers 
+  or other layouts to tightly constrain text to a comfortable reading 
+  measure (e.g., 60ch), or to center individual elements intrinsically.
+*/
+
+.l-wrapper {
+  /* Guarantees your max-width is preserved, pushing padding outward */
+  box-sizing: content-box;
+  max-inline-size: var(--wrapper-max-width, 1200px);
+  padding-inline: var(--wrapper-padding, var(--space-l));
+  margin-inline: auto;
+
+  /* MODIFIERS */
+  &[data-wrapper-size="narrow"] {
+    --wrapper-max-width: 1200px;
+  }
+
+  &[data-wrapper-size="wide"] {
+    --wrapper-max-width: 1300px;
+  }
+
+  &[data-wrapper-size="no-limit"] {
+    --wrapper-max-width: none;
+  }
+}
+
+.l-center {
+  box-sizing: content-box;
+  max-inline-size: var(--measure, 60ch);
+  padding-inline: var(--center-padding, 0);
+  margin-inline: auto;
+
+  /* MODIFIER: Intrinsic (Great for centering a single button or image!) */
+  &[data-center-intrinsic] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ==========================================================================
+                    FLOW / VERTICAL RHYTHM 
+   Handles spacing between sibling elements (The "Lobotomized Owl" technique).
+   ========================================================================== */
+.l-flow {
+  /* 1. Define Defaults */
+  & > * {
+    --flow-multiplier: 1; /* Default size (Medium) */
+    --flow-unit: 1em; /* Typographic (relative) by default */
+  }
+
+  /* MODIFIER: Boolean Flag
+     Switches spacing from relative (em) to consistent (rem) */
+  &[data-flow-consistent] > * {
+    --flow-unit: 1rem;
+  }
+
+  /* MODIFIERS: T-Shirt Sizes
+     Changes the multiplier applied to the base unit
+      */
+  &[data-flow-space="xs"] > * {
+    --flow-multiplier: 0.5;
+  }
+
+  &[data-flow-space="s"] > * {
+    --flow-multiplier: 0.75;
+  }
+
+  /* "m" is the default (1), so we don't strictly need it */
+  &[data-flow-space="m"] > * {
+    --flow-multiplier: 1;
+  }
+
+  &[data-flow-space="l"] > * {
+    --flow-multiplier: 1.5;
+  }
+
+  &[data-flow-space="xl"] > * {
+    --flow-multiplier: 2;
+  }
+
+  &[data-flow-space="2xl"] > * {
+    --flow-multiplier: 2.5;
+  }
+
+  /* EXECUTION: Apply the margin
+     WARNING: data-flow-recursive targets ALL descendants.
+        Use with caution as it can easily break complex nested components.
+      */
+  &:not([data-flow-recursive]) > * + *,
+  &[data-flow-recursive] * + * {
+    margin-block-start: var(
+      --flow-space,
+      calc(var(--flow-multiplier) * var(--flow-unit))
+    );
+  }
+}
+
+/* ==========================
+            THE REGION 
+   ========================== */
+
+/* 
+Creates consistent vertical pacing (rhythm) between major sections of a page.
+*/
+.l-region {
+  padding-block: var(
+      --region-padding-start,
+      var(--region-padding, var(--space-3xl-4xl))
+    )
+    var(--region-padding-end, var(--region-padding, var(--space-3xl-4xl)));
+
+  /* MODIFIERS */
+  &[data-region-space="compact"] {
+    --region-padding: var(--space-l-xl);
+  }
+
+  &[data-region-space="spacious"] {
+    --region-padding: var(--space-4xl-5xl);
+  }
+}
+
+/* ==========================
+            THE FRAME 
+   ========================== */
+
+/* 
+The Frame is a layout designed to force an element to maintain
+a very specific, consistent shape (its aspect ratio), regardless of
+what you put inside it. Think of it like a literal, physical picture frame
+hanging on a wall.
+
+The Frame allows you to stop worrying about what size images you are downloading. 
+Your CSS takes absolute control over how they are framed in the layout!
+*/
+
+/* 1. The Frame Container */
+.l-frame {
+  /* Flexbox centers the image or any text inside */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* You can use variables to pass custom shapes in your HTML, falling back to 16:9 */
+  aspect-ratio: var(--frame-ratio, 16 / 9);
+  overflow: hidden; /* Hide the cropped bits */
+
+  /* 2. The Media inside the Frame */
+  & > img,
+  & > video {
+    inline-size: 100%; /* Width 100% */
+    block-size: 100%; /* Height 100% */
+
+    /* The magic property that crops instead of squishing! */
+    object-fit: cover;
+  }
+
+  /* MODIFIERS */
+  &[data-frame-ratio="4:3"],
+  &[data-frame-ratio="landscape"] {
+    --frame-ratio: 4 / 3;
+  }
+
+  &[data-frame-ratio="1:1"],
+  &[data-frame-ratio="square"] {
+    --frame-ratio: 1 / 1;
+  }
+
+  &[data-frame-ratio="3:2"] {
+    --frame-ratio: 3 / 2;
+  }
+
+  &[data-frame-ratio="portrait"] {
+    --frame-ratio: 3 / 4;
+  }
+}
+
+/* ==========================
+            THE ICON 
+   ========================== */
+
+/* 
+“The Icon” layout is a reliable, bulletproof way to perfectly align
+an SVG icon next to a piece of text (like inside a button or a link).
+It treats the icon as if it were just another letter in the alphabet,
+so it scales and flows naturally with your typography.
+*/
+
+/* 1. The Wrapper (e.g., your Button) */
+.l-with-icon {
+  /* inline-flex keeps it acting like a button/text, but activates flexbox inside */
+  display: inline-flex;
+
+  /* This aligns the bottom of the icon with the bottom of the text */
+  align-items: baseline;
+
+  /* 2. The Icon Element Itself */
+  .icon {
+    /* 0.75em perfectly matches the height of uppercase letters in most fonts */
+    inline-size: 0.75em;
+
+    /* Modern browsers support 1cap (Capital letter height) */
+    inline-size: 1cap;
+    block-size: 0.75em;
+    block-size: 1cap;
+
+    /* Pushes the text away. Automatically flips if text goes Right-to-Left! */
+    margin-inline-end: var(--space-s, 0.5em);
+  }
+}
+
+/* ==========================
+            THE SIDEBAR 
+   ========================== */
+
+/* 
+The Sidebar layout puts a narrow thing next to a wide thing,
+and automatically stacks them when space runs out.
+ */
+.l-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sidebar-gap, var(--space-m));
+  align-items: var(--sidebar-vertical-alignment, stretch);
+
+  /* FIXED SIDE: first child by default, last child if fixed-side="second" */
+  :where(
+    &:not([data-sidebar-fixed-side="second"]) > :first-child,
+    &[data-sidebar-fixed-side="second"] > :last-child
+  ) {
+    flex-grow: 1; /* so it can stretch if needed */
+
+    /* If you don’t set a fixed sidebar width, the sidebar can size itself based on its content. 
+  for fluid sizes use clamp or min/max
+  */
+    flex-basis: var(--sidebar-width, auto);
+  }
+
+  /* FLUID SIDE */
+  :where(
+    &:not([data-sidebar-fixed-side="second"]) > :last-child,
+    &[data-sidebar-fixed-side="second"] > :first-child
+  ) {
+    /* forces the sidebar to stay at its minimum width */
+    flex-grow: 999;
+
+    /* ignore the natural width of the content inside */
+    flex-basis: var(--sidebar-fluid-basis, 0);
+
+    /* Wraps when the main content is squeezed to 50% of the container */
+    min-inline-size: var(--sidebar-wrap-at, 50%);
+  }
+
+  /* MODIFIERS */
+  &[data-sidebar-wrap="reverse"] {
+    flex-wrap: wrap-reverse;
+  }
+
+  /* By default, both elements stretch to the same height,
+    We can turn it off with this modifier  */
+  &[data-sidebar-align="start"] {
+    --sidebar-vertical-alignment: start;
+  }
+
+  &[data-sidebar-align="center"] {
+    --sidebar-vertical-alignment: center;
+  }
+}
+
+/* ==========================
+            THE CLUSTER
+   ========================== */
+
+/* 
+Groups elements horizontally.
+It aligns groups of varying-width items (like buttons, tags, or navigation links) 
+and lets them naturally wrap to a new line when they run out of space.
+*/
+.l-cluster {
+  display: flex;
+  flex-wrap: var(--cluster-wrap, wrap);
+  gap: var(--cluster-gap, var(--space-m));
+  align-items: var(--cluster-vertical-alignment, center);
+  justify-content: var(--cluster-horizontal-alignment, flex-start);
+
+  /* MODIFIER: Repel */
+  &[data-cluster-type="repel"] {
+    --cluster-horizontal-alignment: space-between;
+  }
+
+  /* MODIFIER: Center everything */
+  &[data-cluster-center] {
+    --cluster-horizontal-alignment: center;
+  }
+
+  /* MODIFIER: Prevent wrapping */
+  &[data-cluster-nowrap] {
+    --cluster-wrap: nowrap;
+  }
+}
+
+/* ==========================
+            THE SWITCHER 
+   ========================== */
+
+/* 
+The Switcher is a layout that flips directly between an all-horizontal row
+and an all-vertical column. It does not allow awkward in-between stages.
+ */
+
+.l-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--switcher-gap, var(--space-m));
+  align-items: var(--switcher-vertical-alignment, stretch);
+
+  & > * {
+    flex-grow: 1;
+
+    /* The Magic Math Trick. Defaults to breaking at 30rem */
+    flex-basis: calc((var(--switcher-threshold, 30rem) - 100%) * 999);
+
+    /*
+    If the container is wider than 30rem: The math results in a negative number.
+    CSS ignores negative widths and treats it as 0, meaning all items share
+    the space equally in one horizontal row.
+
+    If the container shrinks below 30rem: The math suddenly results in
+    a massive positive number. Every single item instantly demands 100% width,
+    forcing them to stack vertically all at exactly the same time!
+ */
+  }
+
+  /* MODIFIER: Strict Equal Widths */
+  &[data-switcher-equal-widths] > * {
+    /* This overrides Flexbox's default 'auto' min-width. 
+     It forces all items to respect the flex-grow space distribution evenly, 
+     ignoring how much content is inside them. */
+
+    min-inline-size: 0;
+  }
+
+  /* MODIFIER: Limit items (Wraps if it exceeds the limit) */
+
+  /* 
+    If you put too many items in a row (say, 5 or 6),
+    they would look incredibly squished on a desktop screen.
+
+    The Switcher uses a special selector (`:nth-last-child(n+5)`) to count the items.
+    If it detects 5 or more items, it says, “Nope, that’s too crowded,”
+    and forces them to stack vertically, regardless of how much space there is! 
+*/
+
+  /* Modifier: Limit 3 (Wraps if 4 or more) */
+  &[data-switcher-limit="3"] > :nth-last-child(n + 4),
+  &[data-switcher-limit="3"] > :nth-last-child(n + 4) ~ * {
+    flex-basis: 100%;
+  }
+
+  /* MODIFIER: Vertical Alignment */
+  &[data-switcher-align="start"] {
+    --switcher-vertical-alignment: start;
+  }
+
+  &[data-switcher-align="center"] {
+    --switcher-vertical-alignment: center;
+  }
+
+  &[data-switcher-align="end"] {
+    --switcher-vertical-alignment: end;
+  }
+}
