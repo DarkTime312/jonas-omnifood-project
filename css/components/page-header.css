@@ -1,0 +1,63 @@
+.page-header {
+  padding-block: 1rem;
+  background-color: lightblue;
+}
+
+/* Hamburger Button */
+[aria-controls="primary-nav"] {
+  z-index: 10;
+
+  &[aria-expanded="false"] svg:last-child {
+    display: none;
+  }
+
+  &[aria-expanded="true"] svg:first-child {
+    display: none;
+  }
+
+  @media screen and (width >= 945px) {
+    display: none;
+  }
+}
+
+.primary-nav {
+  @media screen and (width < 945px) {
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: 100%;
+    min-height: 100vh;
+    font-size: var(--font-size-xl);
+    font-weight: 500;
+    background-color: rgb(from var(--clr-white) r g b / 90%);
+    transform: translateX(100%);
+    transition: transform 500ms;
+  }
+}
+
+[aria-controls="primary-nav"][aria-expanded="true"] + .primary-nav {
+  transform: translateX(0);
+}
+
+.primary-nav__list {
+  display: flex;
+  gap: var(--space-xl);
+  align-items: center;
+
+  @media screen and (width < 945px) {
+    flex-direction: column;
+  }
+}
+
+.primary-nav__link {
+  color: var(--color-text-strong);
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-text-brand-base);
+    transition: color 300ms;
+  }
+}

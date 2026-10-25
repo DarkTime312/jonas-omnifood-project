@@ -61,3 +61,11 @@
   /* 68.7971px → 107.2884px */
   font-size: var(--font-size-7xl);
 }
+
+/* =================================
+               Misc 
+   ================================= */
+.u-resize-animation-stopper * {
+  transition: none !important;
+  animation-play-state: paused !important;
+}

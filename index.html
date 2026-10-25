@@ -4,7 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
+    <script src="js/main.js" defer></script>
     <title>Omnifood &mdash; Never cook again!</title>
   </head>
-  <body></body>
+  <body>
+    <header class="page-header">
+      <div class="[ l-wrapper l-cluster ]" data-cluster-type="repel">
+        <a href="/" class="logo" aria-label="home page"
+          ><img src="images/omnifood-logo.png" alt="logo" aria-hidden="true"
+        /></a>
+
+        <button
+          aria-label="Menu"
+          aria-expanded="false"
+          class="hamburger"
+          aria-controls="primary-nav"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            width="40"
+            height="40"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M88 152h336M88 256h336M88 360h336"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-miterlimit="10"
+              stroke-width="48px"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            width="40"
+            height="40"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="m289.94 256 95-95A24 24 0 0 0 351 127l-95 95-95-95a24 24 0 0 0-34 34l95 95-95 95a24 24 0 1 0 34 34l95-95 95 95a24 24 0 0 0 34-34Z"
+            />
+          </svg>
+        </button>
+
+        <nav
+          class="primary-nav"
+          aria-label="primary navigation"
+          id="primary-nav"
+        >
+          <ul class="primary-nav__list" role="list">
+            <li><a href="#" class="primary-nav__link">How it works</a></li>
+            <li><a href="#" class="primary-nav__link">Meals</a></li>
+            <li><a href="#" class="primary-nav__link">Testimonials</a></li>
+            <li><a href="#" class="primary-nav__link">Pricing</a></li>
+            <li><a href="#" class="button">Try for free</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </body>
 </html>
