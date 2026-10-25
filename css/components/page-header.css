@@ -26,6 +26,7 @@
     inset-block-start: 0;
     inset-inline-start: 0;
     display: flex;
+    visibility: hidden;
     align-items: center;
     justify-content: center;
     inline-size: 100%;
@@ -34,11 +35,14 @@
     font-weight: 500;
     background-color: rgb(from var(--clr-white) r g b / 90%);
     transform: translateX(100%);
-    transition: transform 500ms;
+    transition:
+      transform 500ms,
+      visibility 500ms;
   }
 }
 
 [aria-controls="primary-nav"][aria-expanded="true"] + .primary-nav {
+  visibility: visible;
   transform: translateX(0);
 }
 
@@ -60,4 +64,9 @@
     color: var(--color-text-brand-base);
     transition: color 300ms;
   }
+}
+
+/* Lock body scrolling when the menu is open */
+body:has([aria-controls="primary-nav"][aria-expanded="true"]) {
+  overflow: hidden;
 }
