@@ -2,7 +2,7 @@
 //        Mobile Menu
 // =========================
 const hamburgerBtn = document.querySelector('[aria-controls="primary-nav"]');
-const hamburgerLinks = document.querySelectorAll(".primary-nav__link");
+const hamburgerLinks = document.querySelectorAll(".primary-nav a");
 
 const isMenuOpen = () => hamburgerBtn.getAttribute("aria-expanded") === "true";
 
