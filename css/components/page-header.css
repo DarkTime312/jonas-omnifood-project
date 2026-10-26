@@ -35,16 +35,20 @@
     min-height: 100vh;
     font-size: var(--font-size-xl);
     font-weight: 500;
-    background-color: rgb(from var(--clr-white) r g b / 90%);
+    background-color: rgb(from var(--clr-white) r g b / 80%);
+    opacity: 0;
     transform: translateX(100%);
     transition:
-      transform 500ms,
-      visibility 500ms;
+      transform 1s,
+      visibility 1s,
+      opacity 1s;
   }
 }
 
 [aria-controls="primary-nav"][aria-expanded="true"] + .primary-nav {
   visibility: visible;
+  opacity: 1;
+  backdrop-filter: blur(10px);
   transform: translateX(0);
 }
 
