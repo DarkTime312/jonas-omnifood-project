@@ -1,6 +1,6 @@
 .page-header {
-  padding-block: 1rem;
-  background-color: lightblue;
+  padding-block: var(--space-xs);
+  background-color: var(--color-surface-brand-highest);
 }
 
 /* Hamburger Button */
