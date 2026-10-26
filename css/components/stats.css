@@ -1,0 +1,22 @@
+.stats {
+  --cluster-gap: var(--space-xs);
+
+  font-weight: 600;
+}
+
+.stats__avatar-group {
+  display: flex;
+}
+
+.stats__avatar-frame {
+  inline-size: 3rem;
+  border: 3px solid var(--color-surface-brand-highest);
+
+  &:not(:first-child) {
+    margin-inline-start: -1rem;
+  }
+}
+
+.stats__info strong {
+  color: var(--color-text-brand-base);
+}
