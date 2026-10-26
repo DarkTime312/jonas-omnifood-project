@@ -167,14 +167,13 @@ Your CSS takes absolute control over how they are framed in the layout!
     object-fit: cover;
   }
 
-  /* MODIFIERS */
+  /* MODIFIERS: RATIOS */
   &[data-frame-ratio="4:3"],
   &[data-frame-ratio="landscape"] {
     --frame-ratio: 4 / 3;
   }
 
-  &[data-frame-ratio="1:1"],
-  &[data-frame-ratio="square"] {
+  &[data-frame-ratio="1:1"] {
     --frame-ratio: 1 / 1;
   }
 
@@ -184,6 +183,21 @@ Your CSS takes absolute control over how they are framed in the layout!
 
   &[data-frame-ratio="portrait"] {
     --frame-ratio: 3 / 4;
+  }
+
+  /* MODIFIERS: SHAPES */
+  &[data-frame-shape="square"] {
+    --frame-ratio: 1 / 1;
+  }
+
+  &[data-frame-shape="pill"] {
+    border-radius: 100vw;
+  }
+
+  &[data-frame-shape="circle"] {
+    --frame-ratio: 1 / 1; /* a circle must be 1:1 */
+
+    border-radius: 50%;
   }
 }
 
