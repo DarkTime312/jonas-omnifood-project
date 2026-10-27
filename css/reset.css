@@ -74,7 +74,7 @@ h4 {
 h1,
 h2,
 h3 {
-  max-width: 20ch;
+  max-width: 45ch;
 }
 
 p,
@@ -83,9 +83,8 @@ li {
 }
 
 blockquote:not([class]),
-li,
 p {
-  max-width: 50ch;
+  max-width: 55ch;
 }
 
 /* Make images easier to work with */
