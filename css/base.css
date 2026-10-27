@@ -37,3 +37,10 @@ h2 {
 h3 {
   font-size: var(--font-size-2xl);
 }
+
+hgroup p {
+  font-weight: 500;
+  color: var(--color-text-brand-base);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}

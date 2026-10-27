@@ -1,0 +1,4 @@
+.section-how-it-works {
+  --region-padding-start: var(--space-xl-2xl);
+  --region-padding-end: var(--space-4xl-5xl);
+}
