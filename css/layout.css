@@ -305,7 +305,8 @@ and lets them naturally wrap to a new line when they run out of space.
 .l-cluster {
   display: flex;
   flex-wrap: var(--cluster-wrap, wrap);
-  gap: var(--cluster-gap, var(--space-m));
+  gap: var(--cluster-row-gap, var(--cluster-gap, var(--space-m)))
+    var(--cluster-col-gap, var(--cluster-gap, var(--space-m)));
   align-items: var(--cluster-vertical-alignment, center);
   justify-content: var(--cluster-horizontal-alignment, flex-start);
 
