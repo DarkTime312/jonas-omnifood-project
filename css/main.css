@@ -11,4 +11,5 @@
 @import url("components/page-header.css") layer(components);
 @import url("components/stats.css") layer(components);
 @import url("components/hero.css") layer(components);
+@import url("components/section-featured.css") layer(components);
 @import url("utilities.css") layer(utilities);

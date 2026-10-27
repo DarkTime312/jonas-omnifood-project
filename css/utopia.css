@@ -126,9 +126,10 @@
  *                  Custom sizes
  *============================================= **/
 
-/* @link https://utopia.fyi/clamp/calculator?a=360,1150,18—22 */
+/* @link https://utopia.fyi/clamp/calculator?a=360,1150,18—22|20—32 */
 
 /* stylelint-disable-next-line no-duplicate-selectors */
 :root {
   --fluid-18-22: clamp(1.125rem, 1.0111rem + 0.5063vw, 1.375rem);
+  --fluid-20-32: clamp(1.25rem, 0.9082rem + 1.519vw, 2rem);
 }
