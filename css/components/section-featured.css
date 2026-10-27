@@ -5,6 +5,7 @@
   color: var(--color-text-muted);
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
 }
 
 .section-featured__logos {
