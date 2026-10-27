@@ -54,6 +54,11 @@ WHY THEY ARE SEPARATED:
                     FLOW / VERTICAL RHYTHM 
    Handles spacing between sibling elements (The "Lobotomized Owl" technique).
    ========================================================================== */
+@property --flow-space {
+  syntax: "*";
+  inherits: false;
+}
+
 .l-flow {
   /* 1. Define Defaults */
   & > * {
@@ -70,6 +75,10 @@ WHY THEY ARE SEPARATED:
   /* MODIFIERS: T-Shirt Sizes
      Changes the multiplier applied to the base unit
       */
+  &[data-flow-space="2xs"] > * {
+    --flow-multiplier: 0.25;
+  }
+
   &[data-flow-space="xs"] > * {
     --flow-multiplier: 0.5;
   }
@@ -93,6 +102,11 @@ WHY THEY ARE SEPARATED:
 
   &[data-flow-space="2xl"] > * {
     --flow-multiplier: 2.5;
+  }
+
+  /* MODIFIERS: Fluid sizes */
+  &[data-flow-space="fluid-3xl"] > * {
+    --flow-space: var(--space-3xl);
   }
 
   /* EXECUTION: Apply the margin
