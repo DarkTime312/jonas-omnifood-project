@@ -411,3 +411,50 @@ and an all-vertical column. It does not allow awkward in-between stages.
     --switcher-vertical-alignment: end;
   }
 }
+
+/* ==========================
+            AUTO GRID 
+   ========================== */
+
+/* These lines stop an outer grid's values
+   from leaking into a grid nested inside it,
+   which happens easily with cards. */
+@property --grid-min-item-size {
+  syntax: "*";
+  inherits: false;
+}
+
+@property --grid-placement {
+  syntax: "*";
+  inherits: false;
+}
+
+.l-auto-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    var(--grid-placement, auto-fill),
+    minmax(min(var(--grid-min-item-size, 16rem), 100%), 1fr)
+  );
+  gap: var(--grid-row-gap, var(--grid-gap, var(--space-s-m)))
+    var(--grid-col-gap, var(--grid-gap, var(--space-s-m)));
+
+  /* MODIFIERS */
+
+  /* A split 50/50 layout */
+  &[data-grid-type="50-50"] {
+    --grid-placement: auto-fit;
+    --grid-min-item-size: clamp(16rem, 50vw, 33rem);
+  }
+
+  /* Three column grid layout */
+  &[data-grid-type="thirds"] {
+    --grid-placement: auto-fit;
+    --grid-min-item-size: clamp(16rem, 33%, 20rem);
+  }
+
+  /* Collapse empty tracks so a few items stretch across the row.
+    (Default `fill` keeps items at a consistent column width.) */
+  &[data-grid-mode="fit"] {
+    --grid-placement: auto-fit;
+  }
+}
