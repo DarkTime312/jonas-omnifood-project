@@ -1,0 +1,16 @@
+.icon-list {
+  > li {
+    display: flex;
+    gap: var(--icon-gap, var(--space-2xs));
+    align-items: var(--icon-alignment, baseline);
+  }
+
+  > li::before {
+    flex-shrink: 0;
+    inline-size: var(--icon-size, 1.3cap);
+    aspect-ratio: 1 / 1;
+    content: "";
+    background-color: var(--icon-color, var(--color-text-brand-subtle));
+    mask: var(--list-icon, var(--icon-check)) center / contain no-repeat;
+  }
+}

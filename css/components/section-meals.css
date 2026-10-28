@@ -18,15 +18,3 @@
     text-decoration: none;
   }
 }
-
-.section-meals__diets {
-  svg {
-    color: var(--color-text-brand-subtle);
-  }
-
-  li {
-    display: flex;
-    gap: var(--space-2xs);
-    align-items: center;
-  }
-}
