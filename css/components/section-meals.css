@@ -1,0 +1,32 @@
+.section-meals__grid {
+  --grid-gap: var(--space-xl-2xl);
+}
+
+.section-meals__link {
+  --flow-space: var(--space-xl);
+
+  display: block;
+  inline-size: fit-content;
+  margin-inline: auto;
+  color: var(--color-text-brand-subtle);
+  text-align: center;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-text-brand-base);
+    text-decoration: none;
+  }
+}
+
+.section-meals__diets {
+  svg {
+    color: var(--color-text-brand-subtle);
+  }
+
+  li {
+    display: flex;
+    gap: var(--space-2xs);
+    align-items: center;
+  }
+}

@@ -14,4 +14,7 @@
 @import url("components/section-featured.css") layer(components);
 @import url("components/section-how-it-works.css") layer(components);
 @import url("components/steps.css") layer(components);
+@import url("components/section-meals.css") layer(components);
+@import url("components/tag.css") layer(components);
+@import url("components/meal-card.css") layer(components);
 @import url("utilities.css") layer(utilities);

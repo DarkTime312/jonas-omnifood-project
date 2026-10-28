@@ -1,0 +1,20 @@
+.tag {
+  padding: 0.1em 0.7em;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: var(--tag-bg);
+  border-radius: 100vw;
+
+  &[data-tag="vegetarian"] {
+    --tag-bg: var(--color-surface-tag-green);
+  }
+
+  &[data-tag="vegan"] {
+    --tag-bg: var(--color-surface-tag-lime);
+  }
+
+  &[data-tag="paleo"] {
+    --tag-bg: var(--color-surface-tag-gold);
+  }
+}

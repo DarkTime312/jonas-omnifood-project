@@ -1,0 +1,36 @@
+.meal-card {
+  overflow: clip;
+  border-radius: var(--border-radius-l);
+  box-shadow: var(--shadow-base);
+  transition:
+    transform 500ms,
+    box-shadow 500ms;
+
+  &:hover {
+    box-shadow: var(--shadow-high);
+    transform: translateY(-20px);
+  }
+}
+
+.meal-card__tags {
+  --cluster-gap: var(--space-2xs);
+}
+
+.meal-card__content {
+  padding: var(--space-l);
+}
+
+.meal-card__name {
+  font-size: var(--font-size-l);
+  font-weight: 600;
+}
+
+.meal-card__item {
+  display: flex;
+  gap: var(--space-2xs);
+  align-items: baseline;
+}
+
+.meal-card__icon {
+  color: var(--color-text-brand-subtle);
+}
