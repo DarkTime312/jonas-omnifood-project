@@ -62,6 +62,18 @@
   font-size: var(--font-size-7xl);
 }
 
+.u-text-center {
+  text-align: center;
+}
+
+/* =================================
+            Padding & Margin
+   ================================= */
+
+.u-mx-auto {
+  margin-inline: auto;
+}
+
 /* =================================
                Misc 
    ================================= */
