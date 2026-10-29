@@ -21,4 +21,5 @@
 @import url("components/section-showcase.css") layer(components);
 @import url("components/testimonial.css") layer(components);
 @import url("components/gallery.css") layer(components);
+@import url("components/page-footer.css") layer(components);
 @import url("utilities.css") layer(utilities);
