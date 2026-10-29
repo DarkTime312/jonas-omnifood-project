@@ -18,4 +18,7 @@
 @import url("components/section-meals.css") layer(components);
 @import url("components/tag.css") layer(components);
 @import url("components/meal-card.css") layer(components);
+@import url("components/section-showcase.css") layer(components);
+@import url("components/testimonial.css") layer(components);
+@import url("components/gallery.css") layer(components);
 @import url("utilities.css") layer(utilities);

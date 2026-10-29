@@ -1,0 +1,16 @@
+.testimonial__avatar-frame {
+  max-inline-size: 60px;
+}
+
+.testimonial__quote::before {
+  content: open-quote;
+}
+
+.testimonial__quote::after {
+  content: close-quote;
+}
+
+.testimonial__name {
+  font-size: var(--font-size-s);
+  color: var(--color-text-subtle);
+}
