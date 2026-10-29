@@ -137,6 +137,10 @@ Creates consistent vertical pacing (rhythm) between major sections of a page.
     var(--region-padding-end, var(--region-padding, var(--space-3xl-4xl)));
 
   /* MODIFIERS */
+  &[data-region-space="tight"] {
+    --region-padding: var(--space-xs);
+  }
+
   &[data-region-space="compact"] {
     --region-padding: var(--space-l-xl);
   }
