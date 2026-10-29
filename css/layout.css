@@ -376,6 +376,11 @@ and an all-vertical column. It does not allow awkward in-between stages.
  */
   }
 
+  /* MODIFIER: Wrap in reverse */
+  &[data-switcher-reverse] {
+    flex-wrap: wrap-reverse;
+  }
+
   /* MODIFIER: Strict Equal Widths */
   &[data-switcher-equal-widths] > * {
     /* This overrides Flexbox's default 'auto' min-width. 
