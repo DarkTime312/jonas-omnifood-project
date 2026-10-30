@@ -5,7 +5,7 @@
   color: var(--color-text-muted);
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: var(--tracking-wide);
+  letter-spacing: var(--tracking-wider);
 }
 
 .section-featured__logos {

@@ -42,5 +42,5 @@ hgroup p {
   font-weight: 500;
   color: var(--color-text-brand-base);
   text-transform: uppercase;
-  letter-spacing: var(--tracking-wide);
+  letter-spacing: var(--tracking-wider);
 }
