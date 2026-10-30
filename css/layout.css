@@ -105,6 +105,10 @@ WHY THEY ARE SEPARATED:
   }
 
   /* MODIFIERS: Fluid sizes */
+  &[data-flow-space="fluid-l"] > * {
+    --flow-space: var(--space-l);
+  }
+
   &[data-flow-space="fluid-3xl"] > * {
     --flow-space: var(--space-3xl);
   }
