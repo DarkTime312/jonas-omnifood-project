@@ -1,0 +1,69 @@
+.price-plan {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-inline-size: 400px;
+  padding: var(--space-l-xl);
+  overflow: clip;
+  background-color: var(--price-plan-bg, transparent);
+  border: 2px solid var(--color-surface-brand-highest);
+  border-radius: var(--border-radius-l);
+
+  &[data-theme="featured"] {
+    --price-plan-bg: var(--color-surface-brand-highest);
+
+    /* Ribbon */
+    &::before {
+      position: absolute;
+      inset-block-start: 0;
+      inset-inline-end: 0;
+      inline-size: max-content;
+      padding: 0.2em 4em;
+      font-size: var(--font-size-s);
+      font-weight: 700;
+      color: var(--color-text-strong);
+      text-align: center;
+      text-transform: uppercase;
+      content: "best value";
+      background-color: var(--color-surface-tag-gold);
+
+      /* 
+     1. Move the element's center to the top-right corner of the card,
+     2. Rotate 45deg,
+     3. Push it down-left into the card by a single distance (e.g. 4rem)! */
+
+      transform: translate(50%, -50%) rotate(45deg) translateY(4rem);
+    }
+  }
+}
+
+.price-plan__title {
+  font-size: var(--font-size-l);
+  font-weight: 600;
+  color: var(--color-text-brand-base);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+.price-plan__price {
+  font-size: var(--font-size-5xl);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--color-text-strong);
+
+  span {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+.price-plan__description {
+  --flow-space: 0;
+
+  font-size: var(--font-size-s);
+  color: var(--color-text-subtle);
+}
+
+.price-plan__list {
+  flex-grow: 1;
+}

@@ -1,0 +1,19 @@
+.section-pricing__plans {
+  --switcher-gap: var(--space-xl-2xl);
+  --switcher-threshold: 600px;
+
+  justify-content: center;
+}
+
+.section-pricing__description {
+  margin-inline: auto;
+  text-align: center;
+
+  --flow-space: var(--space-2xl);
+}
+
+.section-pricing__features {
+  --grid-min-item-size: 200px;
+  --grid-col-gap: var(--space-l-xl);
+  --grid-row-gap: var(--space-xl-2xl);
+}

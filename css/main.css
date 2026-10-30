@@ -22,4 +22,7 @@
 @import url("components/testimonial.css") layer(components);
 @import url("components/gallery.css") layer(components);
 @import url("components/page-footer.css") layer(components);
+@import url("components/section-pricing.css") layer(components);
+@import url("components/price-plan.css") layer(components);
+@import url("components/feature.css") layer(components);
 @import url("utilities.css") layer(utilities);

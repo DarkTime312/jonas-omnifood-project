@@ -1,0 +1,10 @@
+.feature__icon-wrapper {
+  max-inline-size: 50px;
+  color: var(--color-surface-brand-base);
+  background-color: var(--color-surface-brand-highest);
+}
+
+.feature__title {
+  font-size: var(--font-size-l);
+  color: var(--color-text-strong);
+}
