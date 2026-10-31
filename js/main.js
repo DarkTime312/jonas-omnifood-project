@@ -44,3 +44,23 @@ const resizeObserver = new ResizeObserver((entries) => {
 });
 
 resizeObserver.observe(document.body);
+
+
+// ===========================
+//        Page header
+// =========================
+
+const pageHeader = document.querySelector(".page-header");
+const hero = document.querySelector(".hero");
+
+const observer = new IntersectionObserver(([entry]) => {
+  pageHeader.toggleAttribute("data-stuck", !entry.isIntersecting);
+},
+  {
+    root: null, // viewport
+    threshold: 0, // trigger as soon as 0% of hero is visible
+    rootMargin: "-80px", // triggers 80px BEFORE the hero completely leaves!
+  });
+
+observer.observe(hero);
+

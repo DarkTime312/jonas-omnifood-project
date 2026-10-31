@@ -1,8 +1,25 @@
 .page-header {
-  position: sticky;
   inset-block-start: 0;
-  z-index: 100;
   background-color: var(--color-surface-brand-highest);
+
+  &[data-stuck] {
+    position: sticky;
+    z-index: 100;
+    background-color: transparent;
+    box-shadow: var(--shadow-low);
+
+    /* Moved backdrop-filter to a pseudo-element because applying it directly to 
+      .page-header traps the position: fixed mobile nav inside the header, 
+       causing layout and rendering glitches. */
+    &::before {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      content: "";
+      background-color: rgb(from var(--color-surface-base) r g b / 95%);
+      backdrop-filter: blur(10px);
+    }
+  }
 }
 
 /* Hamburger Button */
