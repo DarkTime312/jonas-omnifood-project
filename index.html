@@ -657,6 +657,78 @@
           </ul>
         </div>
       </section>
+
+      <section
+        class="section-cta [ l-region ]"
+        data-region-space="spacious"
+        id="section-cta"
+      >
+        <div class="[ l-wrapper ]">
+          <div
+            class="cta [ l-sidebar ]"
+            data-sidebar-fixed-side="second"
+            data-sidebar-wrap="reverse"
+          >
+            <div class="cta__content [ l-flow ]" data-flow-space="xl">
+              <h2 class="cta__title">Get your first meal for free!</h2>
+              <p>
+                Healthy, tasty and hassle-free meals are waiting for you. Start
+                eating well today. You can cancel or pause anytime. And the
+                first meal is on us!
+              </p>
+              <form
+                class="form [ l-auto-grid ]"
+                action="/submit"
+                method="POST"
+                data-grid-mode="fit"
+              >
+                <div>
+                  <label for="fullname">Full Name</label>
+                  <input
+                    name="fullname"
+                    id="fullname"
+                    type="text"
+                    placeholder="John Smith"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="email">Email address</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="me@example.com"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="heard-from-us">Where did you hear from us?</label>
+                  <select name="heard-from-us" id="heard-from-us" required>
+                    <option value="">Please choose one option:</option>
+                    <option value="friends">Friends and family</option>
+                    <option value="youtube">YouTube video</option>
+                    <option value="podcast">Podcast</option>
+                    <option value="facebook">Facebook ad</option>
+                    <option value="others">Others</option>
+                  </select>
+                </div>
+                <div>
+                  <button class="button" type="submit" data-theme="dark">
+                    Sign up now
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div
+              class="cta__image-container [ l-frame ]"
+              data-frame-ratio="landscape"
+            >
+              <img src="images/eating.jpg" alt="" class="cta__image" />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="page-footer [ l-region ]">

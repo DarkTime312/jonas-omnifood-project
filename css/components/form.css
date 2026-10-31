@@ -1,0 +1,27 @@
+.form {
+  align-items: end;
+
+  /* Never allow more than 2 columns (40% + 40% + gap), 
+     and stack to 1 column below 240px! */
+  --grid-min-item-size: max(15rem, 40%);
+
+  label {
+    display: block;
+    font-weight: 500;
+  }
+
+  input,
+  select {
+    margin-block-start: 0.5em;
+    background-color: var(--color-surface-brand-highest);
+    border: none;
+    border-radius: var(--border-radius-m);
+  }
+
+  .button,
+  input,
+  select {
+    inline-size: 100%;
+    padding: 0.7em 1em;
+  }
+}

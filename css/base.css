@@ -44,3 +44,8 @@ hgroup p {
   text-transform: uppercase;
   letter-spacing: var(--tracking-wider);
 }
+
+select,
+input {
+  color: inherit;
+}

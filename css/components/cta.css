@@ -1,0 +1,37 @@
+.cta {
+  --sidebar-gap: 0;
+  --sidebar-width: clamp(
+    15rem,
+    30%,
+    400px
+  ); /* image: ideal 400px, shrinks with the container, never below 15rem */
+
+  --sidebar-wrap-at: 22rem; /* stack when the content would get narrower than this */
+
+  overflow: clip;
+  color: var(--color-text-brand-strong);
+  background-image: linear-gradient(
+    to bottom right,
+    var(--color-surface-brand-high),
+    var(--color-surface-brand-base)
+  );
+  border-radius: var(--border-radius-l);
+  box-shadow: var(--shadow-prominent);
+
+  *:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring-brand);
+  }
+}
+
+.cta__content {
+  padding: var(--space-l-xl);
+}
+
+.cta__title {
+  color: inherit;
+}
+
+.cta__image {
+  opacity: 0.6;
+}

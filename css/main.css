@@ -25,4 +25,7 @@
 @import url("components/section-pricing.css") layer(components);
 @import url("components/price-plan.css") layer(components);
 @import url("components/feature.css") layer(components);
+@import url("components/section-cta.css") layer(components);
+@import url("components/cta.css") layer(components);
+@import url("components/form.css") layer(components);
 @import url("utilities.css") layer(utilities);
