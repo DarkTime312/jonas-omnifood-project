@@ -1,6 +1,6 @@
 .button {
   --button-animation-speed: 300ms;
-  --button-color: var(--clr-white);
+  --button-color: var(--color-text-on-dark);
   --button-hover-color: var(--button-color);
   --button-bg: var(--color-surface-brand-base);
   --button-hover-bg: var(--color-surface-brand-low);
@@ -39,7 +39,7 @@
 }
 
 .button[data-theme="dark"] {
-  --button-color: var(--clr-white);
+  --button-color: var(--color-text-on-dark);
   --button-hover-color: var(--color-text-base);
   --button-bg: var(--color-surface-brand-lowest);
   --button-hover-bg: var(--color-surface-base);
