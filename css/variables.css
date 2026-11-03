@@ -40,7 +40,6 @@
   --shd-xl: 0 3.2rem 6.4rem hsl(0deg 0% 0% / 6%);
 
   /* ---------- Effects: Rings & Outlines (Using box-shadow under the hood) ---------- */
-  --ring-inset-white: inset 0 0 0 3px var(--clr-white);
   --ring-focus-orange: 0 0 0 0.8rem hsl(from var(--clr-orange-100) h s l/ 50%);
 
   /* ===================================================
@@ -104,7 +103,6 @@
   --shadow-prominent: var(--shd-l);
 
   /* ---------- Outlines & Focus Rings ---------- */
-  --outline-button-hover: var(--ring-inset-white);
   --focus-ring-brand: var(--ring-focus-orange);
 
   /* ---------- Shape: Border radius ---------- */
