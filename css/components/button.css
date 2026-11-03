@@ -33,7 +33,7 @@
 
 .button[data-theme="light"] {
   --button-color: var(--color-text-base);
-  --button-hover-color: var(--color-surface-base);
+  --button-hover-color: var(--color-text-on-dark);
   --button-bg: var(--color-surface-base);
   --button-hover-bg: var(--color-text-base);
 }
