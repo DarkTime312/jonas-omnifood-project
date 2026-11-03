@@ -10,7 +10,7 @@
 
 .stats__avatar-frame {
   inline-size: 3rem;
-  border: 3px solid var(--color-surface-brand-highest);
+  border: 3px solid var(--stats-images-border-color, var(--color-surface-base));
 
   &:not(:first-child) {
     margin-inline-start: -1rem;

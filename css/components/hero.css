@@ -1,8 +1,11 @@
 .hero {
-  background-color: var(--color-surface-brand-highest);
+  --hero-bg: var(--color-surface-brand-highest);
+
+  background-color: var(--hero-bg);
 
   .stats {
     --flow-space: var(--space-2xl);
+    --stats-images-border-color: var(--hero-bg);
   }
 }
 
