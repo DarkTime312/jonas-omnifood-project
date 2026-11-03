@@ -40,6 +40,8 @@
 }
 
 .primary-nav {
+  font-weight: 500;
+
   @media screen and (width < 945px) {
     position: fixed;
     inset-block-start: 0;
@@ -51,7 +53,6 @@
     inline-size: 100%;
     min-height: 100vh;
     font-size: var(--font-size-xl);
-    font-weight: 500;
     background-color: rgb(from var(--color-surface-base) r g b / 80%);
     opacity: 0;
     transform: translateX(100%);
