@@ -1,9 +1,9 @@
 .page-header {
-  inset-block-start: 0;
   background-color: var(--color-surface-brand-highest);
 
   &[data-stuck] {
     position: sticky;
+    inset-block-start: 0;
     z-index: 100;
     background-color: transparent;
     box-shadow: var(--shadow-low);
@@ -55,19 +55,19 @@
     font-size: var(--font-size-xl);
     background-color: rgb(from var(--color-surface-base) r g b / 80%);
     opacity: 0;
+    backdrop-filter: blur(10px);
     transform: translateX(100%);
     transition:
       transform 1s,
       visibility 1s,
       opacity 1s;
-  }
-}
 
-[aria-controls="primary-nav"][aria-expanded="true"] + .primary-nav {
-  visibility: visible;
-  opacity: 1;
-  backdrop-filter: blur(10px);
-  transform: translateX(0);
+    [aria-controls="primary-nav"][aria-expanded="true"] + & {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 }
 
 .primary-nav__list {
