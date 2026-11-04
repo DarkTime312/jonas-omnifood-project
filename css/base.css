@@ -49,3 +49,7 @@ select,
 input {
   color: inherit;
 }
+
+a {
+  transition: color 300ms;
+}

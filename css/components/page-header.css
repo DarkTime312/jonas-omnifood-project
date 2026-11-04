@@ -86,7 +86,6 @@
   &:hover,
   &:focus-visible {
     color: var(--color-text-brand-base);
-    transition: color 300ms;
   }
 }
 
