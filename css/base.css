@@ -41,6 +41,7 @@ h3 {
 }
 
 hgroup p {
+  margin-block-end: var(--space-2xs);
   font-weight: 500;
   color: var(--color-text-brand-base);
   text-transform: uppercase;
