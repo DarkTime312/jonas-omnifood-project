@@ -3,23 +3,16 @@
 }
 
 .step {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: var(--space-2xl);
   align-items: center;
   counter-increment: step-number;
 
   @media screen and (width >= 768px) {
-    > * {
-      flex: 1;
-    }
+    grid-template-columns: 1fr 1fr;
 
-    &:nth-of-type(odd) {
-      flex-direction: row-reverse;
-    }
-
-    &:nth-of-type(even) {
-      flex-direction: row;
+    &:nth-of-type(odd) .step__image-container {
+      order: 2;
     }
   }
 }
