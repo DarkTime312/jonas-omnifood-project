@@ -1,3 +1,4 @@
 .logo {
-  max-block-size: var(--fluid-18-22);
+  block-size: var(--fluid-18-22);
+  color: var(--color-text-strong);
 }
