@@ -14,3 +14,8 @@
   font-size: var(--font-size-s);
   color: var(--color-text-subtle);
 }
+
+.testimonial__name::before {
+  margin-inline-end: 0.2em;
+  content: "\2014";
+}
