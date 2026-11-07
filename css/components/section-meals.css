@@ -3,13 +3,7 @@
 }
 
 .section-meals__link {
-  --flow-space: var(--space-xl);
-
-  display: block;
-  inline-size: fit-content;
-  margin-inline: auto;
   color: var(--color-text-brand-subtle);
-  text-align: center;
   text-decoration: underline;
 
   &:hover,
