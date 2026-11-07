@@ -5,13 +5,6 @@
   justify-content: center;
 }
 
-.section-pricing__description {
-  margin-inline: auto;
-  text-align: center;
-
-  --flow-space: var(--space-2xl);
-}
-
 .section-pricing__features {
   --grid-min-item-size: 200px;
   --grid-col-gap: var(--space-l-xl);
