@@ -8,17 +8,17 @@
   --switcher-gap: var(--space-3xl-4xl);
 }
 
+.section-showcase .testimonials__grid {
+  /* Never allow more than 2 columns (50% minus gap), 
+     but never shrink smaller than 250px on mobile! */
+
+  --grid-min-item-size: max(250px, 45%);
+  --grid-gap: var(--space-xl-2xl);
+}
+
 .section-showcase .gallery {
   /* Never allow more than 4 columns (25% minus gap), 
      but never shrink smaller than 200px on mobile! */
   --grid-min-item-size: max(200px, 22%);
   --grid-gap: var(--space-xs);
-}
-
-.section-showcase .testimonials__grid {
-  /* Never allow more than 2 columns (33% minus gap), 
-     but never shrink smaller than 250px on mobile! */
-
-  --grid-min-item-size: max(250px, 30%);
-  --grid-gap: var(--space-xl-2xl);
 }
