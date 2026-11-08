@@ -7,6 +7,7 @@
 @import url("base.css") layer(base);
 @import url("layout.css") layer(layout);
 @import url("components/button.css") layer(components);
+@import url("components/skip-link.css") layer(components);
 @import url("components/logo.css") layer(components);
 @import url("components/icon-list.css") layer(components);
 @import url("components/page-header.css") layer(components);
