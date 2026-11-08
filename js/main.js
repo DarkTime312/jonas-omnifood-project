@@ -64,3 +64,13 @@ const observer = new IntersectionObserver(([entry]) => {
 
 observer.observe(hero);
 
+// ===========================
+//        Page footer
+// =========================
+
+function updateCopyrightYear () {
+  const copyrightYear = document.querySelector(".page-footer__copyright-year");
+  copyrightYear.innerHTML = new Date().getFullYear()
+}
+
+updateCopyrightYear()
