@@ -16,6 +16,7 @@
     background-color: var(--color-surface-brand-highest);
     border: none;
     border-radius: var(--border-radius-m);
+    box-shadow: var(--shadow-subtle);
   }
 
   .button,
@@ -23,5 +24,9 @@
   select {
     inline-size: 100%;
     padding: 0.7em 1em;
+  }
+
+  input::placeholder {
+    color: var(--color-text-place-holder);
   }
 }
