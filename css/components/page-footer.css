@@ -14,16 +14,16 @@
   }
 }
 
-.page-footer__socials {
-  --cluster-gap: var(--space-s);
-}
-
 .page-footer__layout {
   --switcher-threshold: 800px;
 }
 
 .page-footer__row > * {
   --switcher-threshold: 300px;
+}
+
+.page-footer__socials {
+  --cluster-gap: var(--space-s);
 }
 
 .page-footer__title {
