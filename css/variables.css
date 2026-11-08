@@ -40,7 +40,10 @@
   --shd-xl: 0 3.2rem 6.4rem hsl(0deg 0% 0% / 6%);
 
   /* ---------- Effects: Rings & Outlines (Using box-shadow under the hood) ---------- */
-  --ring-focus-orange: 0 0 0 0.8rem hsl(from var(--clr-orange-100) h s l/ 50%);
+  --ring-focus-orange-100: 0 0 0 0.5rem
+    hsl(from var(--clr-orange-100) h s l/ 50%);
+  --ring-focus-orange-600: 0 0 0 0.5rem
+    hsl(from var(--clr-orange-600) h s l/ 50%);
 
   /* ===================================================
                      SEMANTIC TOKENS
@@ -103,7 +106,8 @@
   --shadow-prominent: var(--shd-l);
 
   /* ---------- Outlines & Focus Rings ---------- */
-  --focus-ring-brand: var(--ring-focus-orange);
+  --focus-ring-brand-subtle: var(--ring-focus-orange-100);
+  --focus-ring-brand-base: var(--ring-focus-orange-600);
 
   /* ---------- Shape: Border radius ---------- */
   --border-radius-m: 9px;
