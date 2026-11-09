@@ -1,5 +1,11 @@
-.section-meals__grid {
-  --grid-gap: var(--space-xl-2xl);
+.section-meals__layout {
+  --cluster-gap: var(--space-xl-2xl);
+  --cluster-vertical-alignment: start;
+
+  > * {
+    flex: 1 1 19rem;
+    max-inline-size: 25rem;
+  }
 }
 
 .section-meals__link {
