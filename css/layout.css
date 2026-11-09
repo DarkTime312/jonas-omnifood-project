@@ -319,6 +319,21 @@ and automatically stacks them when space runs out.
             THE CLUSTER
    ========================== */
 
+@property --cluster-horizontal-alignment {
+  syntax: "*";
+  inherits: false;
+}
+
+@property --cluster-gap {
+  syntax: "*";
+  inherits: false;
+}
+
+@property --cluster-vertical-alignment {
+  syntax: "*";
+  inherits: false;
+}
+
 /* 
 Groups elements horizontally.
 It aligns groups of varying-width items (like buttons, tags, or navigation links) 
