@@ -8,7 +8,7 @@
   align-items: center;
   counter-increment: step-number;
 
-  @media screen and (width >= 768px) {
+  @media screen and (width >= 48em) {
     grid-template-columns: 1fr 1fr;
 
     &:nth-of-type(odd) .step__image-container {

@@ -34,7 +34,7 @@
     display: none;
   }
 
-  @media screen and (width >= 945px) {
+  @media screen and (width >= 59em) {
     display: none;
   }
 }
@@ -42,7 +42,7 @@
 .primary-nav {
   font-weight: 500;
 
-  @media screen and (width < 945px) {
+  @media screen and (width < 59em) {
     position: fixed;
     inset-block-start: 0;
     inset-inline-start: 0;
@@ -75,7 +75,7 @@
   gap: var(--space-xl);
   align-items: center;
 
-  @media screen and (width < 945px) {
+  @media screen and (width < 59em) {
     flex-direction: column;
   }
 }

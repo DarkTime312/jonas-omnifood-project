@@ -14,7 +14,7 @@
   gap: var(--space-2xl-3xl);
   place-items: center center;
 
-  @media screen and (width >= 945px) {
+  @media screen and (width >= 59em) {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -25,7 +25,7 @@
   align-items: center;
   text-align: center;
 
-  @media screen and (width >= 945px) {
+  @media screen and (width >= 59em) {
     align-items: start;
     text-align: start;
   }
@@ -42,7 +42,7 @@
 .hero__image {
   max-inline-size: 500px;
 
-  @media screen and (width >= 945px) {
+  @media screen and (width >= 59em) {
     max-inline-size: 100%;
   }
 }
