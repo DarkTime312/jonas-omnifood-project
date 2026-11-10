@@ -6,34 +6,31 @@ const hamburgerLinks = document.querySelectorAll(".primary-nav a");
 
 const isMenuOpen = () => hamburgerBtn.getAttribute("aria-expanded") === "true";
 
-
 function toggleHamburgerMenu() {
-    // If it's open, we want to close it (false). If closed, we want to open it (true).
-    const willOpen = !isMenuOpen(); 
+  // If it's open, we want to close it (false). If closed, we want to open it (true).
+  const willOpen = !isMenuOpen();
 
-    // Update Accessibility attributes
-    hamburgerBtn.setAttribute("aria-expanded", willOpen);
-
+  // Update Accessibility attributes
+  hamburgerBtn.setAttribute("aria-expanded", willOpen);
 }
 
-hamburgerBtn.addEventListener("click", toggleHamburgerMenu)
+hamburgerBtn.addEventListener("click", toggleHamburgerMenu);
 
-document.addEventListener('keydown', (e) => {
-    if (e.key === "Escape" && isMenuOpen()) {
-        toggleHamburgerMenu();
-        hamburgerBtn.focus(); // Return focus to button for keyboard users
-    }
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && isMenuOpen()) {
+    toggleHamburgerMenu();
+    hamburgerBtn.focus(); // Return focus to button for keyboard users
+  }
 });
-
 
 // Close the menu on link click
-hamburgerLinks.forEach(link => {
-    link.addEventListener("click", () => {
-        if (isMenuOpen()) toggleHamburgerMenu();
-    });
+hamburgerLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    if (isMenuOpen()) toggleHamburgerMenu();
+  });
 });
 
-// Temporarily disable all CSS animations and transitions 
+// Temporarily disable all CSS animations and transitions
 // whenever the browser window is being resized
 const resizeObserver = new ResizeObserver((entries) => {
   document.body.classList.add("u-resize-animation-stopper");
@@ -45,7 +42,6 @@ const resizeObserver = new ResizeObserver((entries) => {
 
 resizeObserver.observe(document.body);
 
-
 // ===========================
 //        Page header
 // =========================
@@ -53,14 +49,16 @@ resizeObserver.observe(document.body);
 const pageHeader = document.querySelector(".page-header");
 const hero = document.querySelector(".hero");
 
-const observer = new IntersectionObserver(([entry]) => {
-  pageHeader.toggleAttribute("data-stuck", !entry.isIntersecting);
-},
+const observer = new IntersectionObserver(
+  ([entry]) => {
+    pageHeader.toggleAttribute("data-stuck", !entry.isIntersecting);
+  },
   {
     root: null, // viewport
     threshold: 0, // trigger as soon as 0% of hero is visible
     rootMargin: "-80px", // triggers 80px BEFORE the hero completely leaves!
-  });
+  },
+);
 
 observer.observe(hero);
 
@@ -68,9 +66,9 @@ observer.observe(hero);
 //        Page footer
 // =========================
 
-function updateCopyrightYear () {
+function updateCopyrightYear() {
   const copyrightYear = document.querySelector(".page-footer__copyright-year");
-  copyrightYear.textContent = new Date().getFullYear()
+  copyrightYear.textContent = new Date().getFullYear();
 }
 
-updateCopyrightYear()
+updateCopyrightYear();
