@@ -1,4 +1,5 @@
-*:focus {
+/* Custom focus ring for keyboard users */
+*:focus-visible {
   outline: none;
   box-shadow: var(--focus-ring-brand-base);
 }
