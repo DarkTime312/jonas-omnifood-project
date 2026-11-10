@@ -224,40 +224,6 @@ Your CSS takes absolute control over how they are framed in the layout!
 }
 
 /* ==========================
-            THE ICON 
-   ========================== */
-
-/* 
-“The Icon” layout is a reliable, bulletproof way to perfectly align
-an SVG icon next to a piece of text (like inside a button or a link).
-It treats the icon as if it were just another letter in the alphabet,
-so it scales and flows naturally with your typography.
-*/
-
-/* 1. The Wrapper (e.g., your Button) */
-.l-with-icon {
-  /* inline-flex keeps it acting like a button/text, but activates flexbox inside */
-  display: inline-flex;
-
-  /* This aligns the bottom of the icon with the bottom of the text */
-  align-items: baseline;
-
-  /* 2. The Icon Element Itself */
-  .icon {
-    /* 0.75em perfectly matches the height of uppercase letters in most fonts */
-    inline-size: 0.75em;
-
-    /* Modern browsers support 1cap (Capital letter height) */
-    inline-size: 1cap;
-    block-size: 0.75em;
-    block-size: 1cap;
-
-    /* Pushes the text away. Automatically flips if text goes Right-to-Left! */
-    margin-inline-end: var(--space-s, 0.5em);
-  }
-}
-
-/* ==========================
             THE SIDEBAR 
    ========================== */
 
