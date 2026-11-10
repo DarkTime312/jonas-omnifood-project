@@ -70,7 +70,7 @@ observer.observe(hero);
 
 function updateCopyrightYear () {
   const copyrightYear = document.querySelector(".page-footer__copyright-year");
-  copyrightYear.innerHTML = new Date().getFullYear()
+  copyrightYear.textContent = new Date().getFullYear()
 }
 
 updateCopyrightYear()
