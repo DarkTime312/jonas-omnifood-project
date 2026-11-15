@@ -1,0 +1,25 @@
+{
+  "name": "jonas-omnifood-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "lightningcss --bundle --minify css/main.css -o css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarkTime312/jonas-omnifood-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/DarkTime312/jonas-omnifood-project/issues"
+  },
+  "homepage": "https://github.com/DarkTime312/jonas-omnifood-project#readme",
+  "devDependencies": {
+    "lightningcss-cli": "^1.33.0"
+  }
+}
